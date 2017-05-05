@@ -42,5 +42,39 @@ shinyServer(function(input, output) {
     x = "Duration (minutes)",y = "Waiting (minutes)") + theme_linedraw()
   p2
   })
+  
+  library(tidytext)
+  library(wordcloud)
+  library(tidyverse)
+  data(stop_words)
+  terror <- read_csv("globalterrorismdb_0616dist.csv")
+  word_temp <- dplyr::select(terror, eventid, iyear, summary) %>%
+    unnest_tokens(word, summary) %>%
+    anti_join(stop_words) %>%
+    count(word, iyear)
+  output$word_cloud <- renderPlot({
+    words <- word_temp %>%
+      filter(iyear == input$year) %>%
+      with(wordcloud(word, n, max.words = 50))
+  })
+  
+  #library(ggmap)
+  #terror_us <- terror %>% filter(country_txt == "United States")
+  #output$us_map <- renderPlot({
+    #map_df <- map_data(map = "world")
+    #ggplot() + geom_polygon(data = map_df, aes(x = long, y = lat, group = group)) + 
+    #  geom_point(data = terror_dat, aes(x = longitude, y = latitude, color = country_txt), show.legend = F)
+    #state_borders <- map_data("state") 
+    #damap <- ggplot() + geom_polygon(data = state_borders, aes(x = long, y = lat, group = group)) 
+    
+    #if (input$euro_checks == terror$nkill) {
+    #  damap <- damap + geom_point(data = terror_us, aes(x = longitude, y = latitude, color = nkill), show.legend = F)
+    #} else if (input$euro_checks == terror$success) {
+    #  damap <- damap + geom_point(data = terror_us, aes(x = longitude, y = latitude, color = success), show.legend = F)
+    #} else {
+    #  damap <- damap + geom_point(data = terror_us, aes(x = longitude, y = latitude, color = suicide), show.legend = F)
+    #}
+    #damap
+  #})
 
 })

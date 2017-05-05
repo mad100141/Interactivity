@@ -1,8 +1,8 @@
 library(shiny)
 library(ggplot2)
-
+library(tidyverse)
 library(shinydashboard)
-
+terror <- read_csv("globalterrorismdb_0616dist.csv")
 shinyUI(bootstrapPage(
 
   dashboardPage(
@@ -53,6 +53,11 @@ shinyUI(bootstrapPage(
                   checkboxInput(inputId = "bandwidth_adj",
                           label = strong("Bandwidth Adjustments"),
                           value = FALSE),
+                  sliderInput(inputId = "year", label = "Year", 
+                              min = 1970, max = 2015, value = 1970),
+                  #selectInput(inputId = "euro_checks", label = "Variable",
+                   #                  choices = list("# kills" = terror$nkill, "success" = terror$success,
+                    #                                "suicide" = terror$suicide), selected = terror$nkill),
 
             conditionalPanel(condition = "input.bandwidth_adj == true",
                   box(title = "X Bandwidth Adjustment",
@@ -63,7 +68,9 @@ shinyUI(bootstrapPage(
                   mainPanel(
                     tabsetPanel(
                       tabPanel("Scatter Plot", plotOutput(outputId = "scatter_plot", height = "300px")),
-                      tabPanel("Contour Plot", plotOutput(outputId = "contour_plot", height = "300px"))
+                      tabPanel("Contour Plot", plotOutput(outputId = "contour_plot", height = "300px")),
+                      tabPanel("Word Cloud", plotOutput(outputId = "word_cloud", height = "300px"))
+                      #tabPanel("USA", plotOutput(outputId = "us_map", height = "300px"))
                       )
                     )
                   )
