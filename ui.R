@@ -10,9 +10,10 @@ shinyUI(bootstrapPage(
     dashboardHeader(title = "Terrorism WorldWide"),
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Julien", tabName = "julien", icon = icon("map")),
-        menuItem("Johnny", tabName = "johnny", icon = icon("newspaper-o")),
-        menuItem("Maria", tabName = "maria", icon = icon("heart"))
+        menuItem("Through Time", tabName = "julien", icon = icon("map")),
+        menuItem("In the Media", tabName = "johnny", icon = icon("newspaper-o")),
+        menuItem("Worst Attacks", tabName = "maria", icon = icon("heart")),
+        menuItem("Success and Region", tabName = "maria2", icon = icon("bar-chart"))
       )
     ),
     dashboardBody(
@@ -20,7 +21,8 @@ shinyUI(bootstrapPage(
         tabItem(tabName = "julien",
                   sliderInput(inputId = "year1",
                               label = "Year Scale:",
-                              min = 1970, max = 2015, value = 1970,step = 1),
+                              min = 1970, max = 2015, value = 1970,step = 1,
+                              animate=animationOptions(interval=500, loop=T)),
                   plotOutput(outputId = "julien1")
 
       ),
@@ -30,13 +32,26 @@ shinyUI(bootstrapPage(
               tabPanel("Word Cloud", plotOutput(outputId = "word_cloud",
                                                 height = "300px"))
       ),
-      tabItem(tabName = "maria",
-              sliderInput(inputId = "year", label = "Year",
-                          min = 1970, max = 2015, value = 1970),
-              tabPanel("Scatter", plotOutput(outputId = "scatter",
-                                                height = "300px"))
-#                plotOutput(outputId = "scatter")
+      tabItem(tabName = "maria", title = "Group Name",
+              tabPanel("Scatter", plotlyOutput(outputId = "scatter", width = "600px"))
 
+      ),
+      tabItem(tabName = "maria2",
+              fluidRow(
+                selectInput(inputId = 'bar_option', label = 'Select Variables',
+                            choices = c("Weapon Type",
+                                        "Success",
+                                        "Region"),
+                            selected = "Weapon Type"),
+                tabPanel("Bar Chart Choose",
+                         conditionalPanel(condition = "input.bar_option" == "Weapon Type",
+                                          plotlyOutput(outputId = "barChartWeapon")),
+                         conditionalPanel(condition = "input.bar_option" == "Success",
+                                          plotOutput(outputId = "barChartSuccess")),
+                         conditionalPanel(condition = "input.bar_option" == "Region",
+                                          plotOutput(outputId = "barChartRegion"))
+                )
+              )
       )
     )
   )
