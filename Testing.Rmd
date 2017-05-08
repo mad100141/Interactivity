@@ -1,0 +1,218 @@
+---
+title: "Interactive Testing"
+output: html_document
+---
+
+
+```{r}
+library(tidyverse)
+library(readr)
+terror <- read_csv("globalterrorismdb_0616dist.csv")
+terror_kill_yr <- read_csv("terror_nkill_year.csv")
+#colnames(terror)
+```
+
+
+Creating Terror Kill Then Sending it into a CSV file
+```{r, message=FALSE,warning=FALSE}
+
+# terror_kill_yr <- terror %>% dplyr::select(iyear, imonth, iday, 
+#                                     nkill, gname, country_txt)
+# 
+ terror_kill_yr$date <- 
+   as.Date(with(terror_kill_yr, paste(iyear, imonth, iday, sep="-")), "%Y-%m-%d")
+# 
+# Make this a CSV file
+# write.csv(terror_kill_yr, file = "terror_nkill_year.csv"
+# 
+# terror_kill_yr$datePOS <- as.POSIXlt(terror_kill_yr$date)
+# groups_num <- unique(terror_kill_yr$gname)
+# countryL <- unique(terror_kill_yr$country_txt)
+
+#word_tempI <- dplyr::select(terror, eventid, iyear, summary)
+#word_tempI$summary <- as.character(word_tempI$summary)
+#write.csv(word_tempI, file = "terror_word.csv")
+
+
+```
+
+```{r}
+#install.packages("plotly")
+library(plotly)
+
+#Filter Top (100 groups), Filter By Continents
+#Ignoring 10853
+p <- plot_ly(terror_kill_yr,type = "scatter", 
+             x = terror_kill_yr$date, y = terror_kill_yr$nkill, 
+             marker = list(color="#264E86"), mode = "none",
+             hoverinfo = "text",
+             text = ~paste(terror_kill_yr$country_txt,
+                                 'Number of Kills: ', terror_kill_yr$nkill ))
+#Add Number of Kills, Country, Yr
+p
+
+```
+
+
+Interactive Bar Chart Below
+```{r}
+
+map_df <- map_data(map = "world")
+ggplot() + geom_polygon(data = map_df, aes(x = long, y = lat, group = group)) + 
+  geom_point(data = terror_dat, aes(x = longitude, y = latitude, color = country_txt), show.legend = F)
+
+#plot_geo(data = map_df, type="choropleth",)
+
+library(plotly)
+
+terror_barMap <- terror %>% 
+  dplyr::select(attacktype1_txt, success, weaptype1_txt, 
+                iyear, imonth, iday, nkill, gname, country_txt,
+                longtitude,latitude, region_txt)
+
+attackL <- unique(terror_barMap$attacktype1_txt)
+weaponType <- unique(terror_barMap$weaptype1_txt)
+
+terror_barMap$hover <- with(terror_barMap, paste(country_txt,"Group:" ,gname,
+                           "Attack Type:", attacktype1_txt ))
+```
+
+
+Interactive Bar Chart
+
+```{r}
+#Weapons, Attacks
+
+
+
+p <- plot_ly(terror_kill_yr,type = "scatter", 
+             x = terror_kill_yr$date, y = terror_kill_yr$nkill, 
+             marker = list(color="#264E86"), mode = "none",
+             hoverinfo = "text",
+             text = ~paste(terror_kill_yr$country_txt,
+                                 'Number of Kills: ', terror_kill_yr$nkill ))
+#Add Number of Kills, Country, Yr
+p
+
+terror_bar <- terror %>% 
+  dplyr::select(attacktype1_txt, success, weaptype1_txt, 
+                iyear, imonth, iday, nkill, gname, country_txt, region_txt)
+
+terror_bar$success <- as.factor(terror_bar$success)
+terror_bar$success <- recode(terror_bar$success, "0" = "No", "1" = "Yes")
+
+write.csv(terror_bar, file = "terror_bar.csv")
+
+attackL <- unique(terror_bar$attacktype1_txt)
+weaponType <- unique(terror_bar$weaptype1_txt)
+
+grid <- as.data.frame(table(terror_bar$attacktype1_txt,terror_bar$weaptype1_txt))
+
+rB <- c('#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928')
+
+tol12qualitative=c("#332288", "#6699CC", "#88CCEE", "#44AA99", "#117733", "#999933", "#DDCC77", "#661100", "#CC6677", "#AA4466", "#882255", "#AA4499")
+
+f <- list(
+  family = "Palatino",
+  size = 12,
+  color = "red"
+)
+x <- list(
+  title = "Attack Type",
+  titlefont = f,
+  tickangle = 25
+)
+y <- list(
+  title = "Number of Fatalities",
+  titlefont = f
+)
+
+barG <- ggplot(terror_bar, aes(x = attacktype1_txt)) + 
+  geom_bar(stat = "count",aes(fill = weaptype1_txt, 
+               text = paste("Attack Type:",attacktype1_txt,
+                            "\n Weapon Type:", weaptype1_txt))) + 
+  labs(x = "Attack Type", y = "Number of Attacks", 
+       title = "Attacks Used by Terrorists") + 
+  theme_linedraw() + theme(axis.text.x = element_text(angle = 20, hjust = 1)) + 
+  theme(legend.position="none") + scale_fill_manual(values = tol12qualitative)
+barG
+a <- list(
+  x = terror_bar$attacktype1_txt,
+  fill = terror_bar$weaptype1_txt,
+  text = rownames(terror_bar)
+)
+
+b <- ggplotly(barG, tooltip = c("text"))
+b
+
+bar <- plot_ly(terror_bar, 
+             x = ~attacktype1_txt, y = ~nkill,
+             color = ~weaptype1_txt, 
+             type = "bar", name = "Attack", showlegend = FALSE) %>%
+  layout(barmode = 'stack', xaxis = x, yaxis = y)
+#Add Number of Kills, Country, Yr
+bar
+
+
+barS <- ggplot(terror_bar) +
+          geom_bar(aes(x = attacktype1_txt,fill = success)) +
+          labs(x = "Attack Type", y = "Number of Attacks",
+               title = "Attacks Success by Attack Type", fill = "Success") +
+          theme_linedraw() + theme(axis.text.x = element_text(angle = 20,
+                                                              hjust = 1))
+
+barS
+
+barRegion <- ggplot(terror_bar) +
+          geom_bar(aes(fill = attacktype1_txt,x = region_txt)) +
+          labs(x = "Region", y = "Number of Attacks",
+               title = "Attack Methods by Region", fill = "Method of Terror") +
+          theme_linedraw() + theme(axis.text.x = element_text(angle = 20, 
+                                                              hjust = 1)) + 
+  scale_fill_manual(values = tol12qualitative)
+
+barRegion
+ggplotly(barRegion)
+
+what <- ggplot(data=terror_bar, aes(x=iyear,fill=attacktype1_txt)) + geom_bar() + ggtitle("Yearly terrorist attacks by attack type")+         
+    labs(x = "Years", y = "Number of Attacks")
+ggplotly(what)
+
+another <- ggplot(data=terror_bar, aes(x=iyear,fill=attacktype1_txt)) + geom_bar() + ggtitle("Yearly terrorist attacks by attack type")+         
+    labs(x = "Years", y = "Number of Attacks") + 
+  facet_wrap( ~ success)
+ggplotly(another, tooltip = "all")
+
+```
+```{r}
+table(terror_bar$gname)
+
+group_death_count <- aggregate(terror_bar$nkill,
+                               by = list(groupN = terror_bar$gname),FUN=sum)
+
+group_death <- arrange(group_death_count, desc(x))
+n <- group_death[1:60,]
+
+worst <- arrange(terror_bar, desc(nkill))
+w <- worst[1:10,]
+
+```
+
+Julien's Map 
+
+```{r}
+map_df  <- map_data(map = "world")
+new_dat <- subset(terror, iyear == 2001)
+
+jMap <- ggplot() + geom_polygon(data = map_df, aes(x = long, y = lat, group = group)) + 
+  geom_density2d(data = new_dat, (aes(x = longitude, y = latitude)), size = 0.1) +
+  stat_density2d(data = new_dat, aes(x = longitude, y = latitude, fill = ..level.., size = 0.01), alpha = 0.5, geom="polygon", bins = 5) +
+  geom_point(data = new_dat, aes(x = longitude, y = latitude, colour = nkill, size = nkill)) +
+  scale_color_gradient(low = "blue", high = "red", name = 'Number of Deaths') +
+  scale_fill_gradient(low = "blue", high = "red", name = 'Density of Attacks')
+
+jMap
+```
+
+
+
