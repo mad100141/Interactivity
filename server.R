@@ -14,6 +14,8 @@ map_data_julien <- read_csv("terror_map_julien.csv")
 terror_scatter <- read_csv("terror_scatter.csv")
 terror_bar <- read_csv("terror_bar.csv")
 
+
+
 shinyServer(function(input, output) {
 
   output$julien1 <- renderPlot({
@@ -115,6 +117,37 @@ shinyServer(function(input, output) {
 
         barRegion
       })
+      
+      terror_data.recent <- terror_data %>% filter(iyear > 1997)
+      terror_data.recent.usa <- terror_data.recent %>% filter(country == 217 & gname != "Unknown") 
+      usa_links <- terror_data.recent.usa %>% group_by(gname, targtype1_txt) %>% summarise(weight =
+                                                                                             sum(success)) %>% arrange(gname) %>% rename(from = gname, to = targtype1_txt) 
+      
+      # usa_links
+      usa_nodes <-
+        rbind(data.frame(
+          name = unique(terror_data.recent.usa$gname),
+          type = 1
+        ),
+        data.frame(
+          name =
+            unique(terror_data.recent.usa$targtype1_txt),
+          type = 2
+        ))
+      
+      
+      #zero_index links  
+      usa_links$from <- match(usa_links$from, usa_nodes$name) - 1
+      usa_links$to <- match(usa_links$to, usa_nodes$name) - 1
+      
+      output$sankey <- renderSankeyNetwork({
+        sankeyNetwork(Links = usa_links, Nodes = usa_nodes, Source = "from", Target = "to", 
+                      Value = "weight", NodeID = "name",  fontSize = 12, nodeWidth = 30)
+        
+      })
+  
+      
+      
     })
 
 #})

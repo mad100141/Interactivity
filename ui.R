@@ -3,6 +3,7 @@ library(ggplot2)
 library(shinythemes)
 library(shinydashboard)
 library(ggmap)
+library(networkD3)
 
 shinyUI(bootstrapPage(
 
@@ -13,7 +14,8 @@ shinyUI(bootstrapPage(
         menuItem("Through Time", tabName = "julien", icon = icon("map")),
         menuItem("In the Media", tabName = "johnny", icon = icon("newspaper-o")),
         menuItem("Worst Attacks", tabName = "maria", icon = icon("heart")),
-        menuItem("Success and Region", tabName = "maria2", icon = icon("bar-chart"))
+        menuItem("Success and Region", tabName = "maria2", icon = icon("bar-chart")),
+        menuItem("Attack Targets", tabName = "alex1", icon = icon("bar-chart"))
       )
     ),
     dashboardBody(
@@ -52,8 +54,12 @@ shinyUI(bootstrapPage(
                                           plotOutput(outputId = "barChartRegion"))
                 )
               )
-      )
-    )
+      ),
+      tabItem(tabName = "alex1",
+              fluidRow(
+                tabPanel("Attack Targets", sankeyNetworkOutput("sankey")
+              )
+      )))
   )
  )
 ))
