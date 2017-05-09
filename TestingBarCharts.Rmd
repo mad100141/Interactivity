@@ -1,0 +1,194 @@
+---
+title: "TestingBarGrid"
+output: html_document
+---
+
+```{r}
+#  barChartsFull <- terror %>% 
+#    select(region_txt, attacktype1_txt, weaptype1_txt, success, targtype1_txt, 
+#           suicide, multiple, iyear, imonth,iday, nkill)
+#  
+#  barChartsFull$date <- 
+#     as.Date(with(barChartsFull, paste(iyear, imonth, iday, sep="-")), "%Y-%m-%d")
+#  
+#  barChartsFull$success <- as.factor(barChartsFull$success)
+#  barChartsFull$success <- recode(barChartsFull$success, "0" = "No", "1" = "Yes")
+#  
+#  barChartsFull$suicide <- as.factor(barChartsFull$suicide)
+#  barChartsFull$suicide <- recode(barChartsFull$suicide, "0" = "No", "1" = "Yes")
+#  
+# barChartsFull$multiple <- as.factor(barChartsFull$multiple)
+#  barChartsFull$multiple <- recode(barChartsFull$multiple, "0" = "No", "1" = "Yes")
+# 
+#  write.csv(barChartsFull, file = "barCharts.csv")
+
+```
+Finished building the dataset I wished to use
+Now to make the graphs with all the possible combos
+```{r}
+library(tidyverse)
+library(plotly)
+library(readr)
+
+barChartsFull <- read_csv("barCharts.csv")
+#region
+#attack type
+#weapon type
+#success
+#target victim
+#suicide
+#multiple
+#select(region_txt, attacktype1_txt, weaptype1_txt, success, targtype1_txt, 
+#          suicide, multiple, iyear, imonth,iday, nkill)
+
+#Region given etc
+ggplot(barChartsFull, aes(x = region_txt)) + 
+  geom_bar(aes(fill = attacktype1_txt))
+
+ggplot(barChartsFull, aes(x = region_txt)) + 
+  geom_bar(aes(fill = weaptype1_txt))
+
+ggplot(barChartsFull, aes(x = region_txt)) + 
+  geom_bar(aes(fill = success))
+
+ggplot(barChartsFull, aes(x = region_txt)) + 
+  geom_bar(aes(fill = targtype1_txt))
+
+ggplot(barChartsFull, aes(x = region_txt)) + 
+  geom_bar(aes(fill = suicide))
+
+ggplot(barChartsFull, aes(x = region_txt)) + 
+  geom_bar(aes(fill = multiple))
+
+#########
+ggplot(barChartsFull, aes(x = attacktype1_txt)) + 
+  geom_bar(aes(fill = region_txt))
+
+ggplot(barChartsFull, aes(x = attacktype1_txt)) + 
+  geom_bar(aes(fill = weaptype1_txt))
+
+ggplot(barChartsFull, aes(x = attacktype1_txt)) + 
+  geom_bar(aes(fill = success))
+
+ggplot(barChartsFull, aes(x = attacktype1_txt)) + 
+  geom_bar(aes(fill = targtype1_txt))
+
+ggplot(barChartsFull, aes(x = attacktype1_txt)) + 
+  geom_bar(aes(fill = suicide))
+
+ggplot(barChartsFull, aes(x = attacktype1_txt)) + 
+  geom_bar(aes(fill = multiple))
+###########
+
+ggplot(barChartsFull, aes(x = weaptype1_txt)) + 
+  geom_bar(aes(fill = region_txt))
+
+ggplot(barChartsFull, aes(x = weaptype1_txt)) + 
+  geom_bar(aes(fill = attacktype1_txt))
+
+ggplot(barChartsFull, aes(x = weaptype1_txt)) + 
+  geom_bar(aes(fill = success))
+
+ggplot(barChartsFull, aes(x = weaptype1_txt)) + 
+  geom_bar(aes(fill = targtype1_txt))
+
+ggplot(barChartsFull, aes(x = weaptype1_txt)) + 
+  geom_bar(aes(fill = suicide))
+
+ggplot(barChartsFull, aes(x = weaptype1_txt)) + 
+  geom_bar(aes(fill = multiple))
+
+##########
+ggplot(barChartsFull, aes(x = success)) + 
+  geom_bar(aes(fill = region_txt))
+
+ggplot(barChartsFull, aes(x = success)) + 
+  geom_bar(aes(fill = attacktype1_txt))
+
+ggplot(barChartsFull, aes(x = success)) + 
+  geom_bar(aes(fill = weaptype1_txt))
+
+ggplot(barChartsFull, aes(x = success)) + 
+  geom_bar(aes(fill = targtype1_txt))
+
+ggplot(barChartsFull, aes(x = success)) + 
+  geom_bar(aes(fill = suicide))
+
+ggplot(barChartsFull, aes(x = success)) + 
+  geom_bar(aes(fill = multiple))
+#########
+ggplot(barChartsFull, aes(x = targtype1_txt)) + 
+  geom_bar(aes(fill = region_txt))
+
+ggplot(barChartsFull, aes(x = targtype1_txt)) + 
+  geom_bar(aes(fill = attacktype1_txt))
+
+ggplot(barChartsFull, aes(x = targtype1_txt)) + 
+  geom_bar(aes(fill = weaptype1_txt))
+
+ggplot(barChartsFull, aes(x = targtype1_txt)) + 
+  geom_bar(aes(fill = success))
+
+ggplot(barChartsFull, aes(x = targtype1_txt)) + 
+  geom_bar(aes(fill = suicide))
+
+ggplot(barChartsFull, aes(x = targtype1_txt)) + 
+  geom_bar(aes(fill = multiple))
+
+##########
+ggplot(barChartsFull, aes(x = suicide)) + 
+  geom_bar(aes(fill = region_txt))
+
+ggplot(barChartsFull, aes(x = suicide)) + 
+  geom_bar(aes(fill = attacktype1_txt))
+
+ggplot(barChartsFull, aes(x = suicide)) + 
+  geom_bar(aes(fill = weaptype1_txt))
+
+ggplot(barChartsFull, aes(x = suicide)) + 
+  geom_bar(aes(fill = success))
+
+ggplot(barChartsFull, aes(x = suicide)) + 
+  geom_bar(aes(fill = targtype1_txt))
+
+ggplot(barChartsFull, aes(x = suicide)) + 
+  geom_bar(aes(fill = multiple))
+
+##########
+ggplot(barChartsFull, aes(x = multiple)) + 
+  geom_bar(aes(fill = region_txt))
+
+ggplot(barChartsFull, aes(x = multiple)) + 
+  geom_bar(aes(fill = attacktype1_txt))
+
+ggplot(barChartsFull, aes(x = multiple)) + 
+  geom_bar(aes(fill = weaptype1_txt))
+
+ggplot(barChartsFull, aes(x = multiple)) + 
+  geom_bar(aes(fill = success))
+
+ggplot(barChartsFull, aes(x = multiple)) + 
+  geom_bar(aes(fill = targtype1_txt))
+
+ggplot(barChartsFull, aes(x = multiple)) + 
+  geom_bar(aes(fill = suicide), show.legend = FALSE) + theme_classic()
+```
+The bare bones of all the plots above
+Now to build the selector code
+```{r}
+
+#X-axis Categorical Var
+#Fill In Var
+
+#xaxis
+#fill
+
+ggplot(barChartsFull, aes(x = input$xaxis)) + 
+  geom_bar(aes(fill = input$fill), show.legend = FALSE) + theme_classic() + 
+  labs(x = input$xaxis, y = input$fill, 
+       title = paste(fill, " Conditional Given the Marginal of", xaxis))
+
+
+
+```
+

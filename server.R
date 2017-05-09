@@ -117,12 +117,12 @@ shinyServer(function(input, output) {
 
         barRegion
       })
-      
-      terror_data.recent <- terror_data %>% filter(iyear > 1997)
-      terror_data.recent.usa <- terror_data.recent %>% filter(country == 217 & gname != "Unknown") 
+
+      terror_data.recent <- terror %>% filter(iyear > 1997)
+      terror_data.recent.usa <- terror_data.recent %>% filter(country == 217 & gname != "Unknown")
       usa_links <- terror_data.recent.usa %>% group_by(gname, targtype1_txt) %>% summarise(weight =
-                                                                                             sum(success)) %>% arrange(gname) %>% rename(from = gname, to = targtype1_txt) 
-      
+                                                                                             sum(success)) %>% arrange(gname) %>% rename(from = gname, to = targtype1_txt)
+
       # usa_links
       usa_nodes <-
         rbind(data.frame(
@@ -134,90 +134,18 @@ shinyServer(function(input, output) {
             unique(terror_data.recent.usa$targtype1_txt),
           type = 2
         ))
-      
-      
-      #zero_index links  
+
+
+      #zero_index links
       usa_links$from <- match(usa_links$from, usa_nodes$name) - 1
       usa_links$to <- match(usa_links$to, usa_nodes$name) - 1
-      
+
       output$sankey <- renderSankeyNetwork({
-        sankeyNetwork(Links = usa_links, Nodes = usa_nodes, Source = "from", Target = "to", 
+        sankeyNetwork(Links = usa_links, Nodes = usa_nodes, Source = "from", Target = "to",
                       Value = "weight", NodeID = "name",  fontSize = 12, nodeWidth = 30)
-        
+
       })
-  
-      
-      
-    })
 
-#})
 
-  # output$julien2 <- renderPlot({
-  #   plot(1:5,1:5)
-  # })
 
-#   output$alex1 <- renderPlot({
-#     plot(1:5,1:5)
-#   })
-#
-#   output$alex2 <- renderPlot({
-#     plot(1:5,1:5)
-#   })
-#
-#   output$johnny1 <- renderPlot({
-#     plot(1:5,1:5)
-#   })
-#
-#   output$jonny2 <- renderPlot({
-#     plot(1:5,1:5)
-#   })
-#
-#   output$maria1 <- renderPlot({
-#     plot(1:5,1:5)
-#   })
-#
-#   output$maria1 <- renderPlot({
-#     plot(1:5,1:5)
-#   })
-#
-#   output$main_plot <- renderPlot({
-#
-#     p <- ggplot(faithful, aes(x = eruptions)) +
-#       geom_histogram(aes(y = ..density..), bins = as.numeric(input$n_breaks),
-#                      fill = "black", color = "white") +
-#       scale_x_continuous(breaks = seq(1.5,5, by=0.5)) +
-#       labs(x = "Duration (minutes)", y = "Density",
-#            title = "Geyser eruption duration") + theme_linedraw()
-#
-#     if (input$individual_obs) {p <- p + geom_rug(aes(faithful$eruptions))}
-#
-#     if (input$density) {p <- p + geom_density(adjust = input$bw_adjust,color = "blue")}
-#
-#     p
-#   })
-#
-#   output$scatter_plot <- renderPlot({
-#
-#     p1 <- ggplot(faithful, aes(x = eruptions, y = waiting)) +
-#       geom_point(size = input$size_adjust) +
-#       labs(
-#         title = "Geyser eruption duration vs Waiting time",
-#         x = "Duration (minutes)",
-#         y = "Waiting (minutes)"
-#       ) + theme_linedraw()
-#     if (input$scatter_trend) {p1 <- p1 + geom_smooth(se = F)}
-#     p1
-#   })
-#
-#   output$contour_plot <- renderPlot({
-#
-#     p2 <- ggplot(faithful, aes(x = eruptions, y = waiting)) +
-#       stat_density2d(aes(fill = ..density..), geom = "tile", contour = F,
-#                      h = c(input$sliderX,input$sliderY)) +
-#       scale_fill_gradient2(low = "white", mid = "orange", high = "red", midpoint= .1) +
-#       labs(title = "Geyser eruption duration vs Waiting time",
-#            x = "Duration (minutes)",y = "Waiting (minutes)") + theme_linedraw()
-#     p2
-#   })
-#
-# })
+})
