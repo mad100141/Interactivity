@@ -1,0 +1,469 @@
+"","gname","iyear","imonth","region","kills"
+"1","Al-Nusrah Front",2012,1,10,26
+"2","Al-Nusrah Front",2012,2,10,30
+"3","Al-Nusrah Front",2012,3,10,29
+"4","Al-Nusrah Front",2012,4,10,13
+"5","Al-Nusrah Front",2012,5,10,57
+"6","Al-Nusrah Front",2012,6,10,7
+"7","Al-Nusrah Front",2012,7,10,0
+"8","Al-Nusrah Front",2012,9,10,22
+"9","Al-Nusrah Front",2012,10,10,49
+"10","Al-Nusrah Front",2012,11,10,63
+"11","Al-Nusrah Front",2012,12,10,8
+"12","Al-Nusrah Front",2013,1,10,69
+"13","Al-Nusrah Front",2013,2,10,91
+"14","Al-Nusrah Front",2013,3,10,1
+"15","Al-Nusrah Front",2013,4,10,1
+"16","Al-Nusrah Front",2013,5,10,60
+"17","Al-Nusrah Front",2013,6,10,150
+"18","Al-Nusrah Front",2013,7,10,136
+"19","Al-Nusrah Front",2013,8,10,25
+"20","Al-Nusrah Front",2013,9,10,61
+"21","Al-Nusrah Front",2013,10,10,88
+"22","Al-Nusrah Front",2013,12,10,13
+"23","Al-Nusrah Front",2014,1,10,27
+"24","Al-Nusrah Front",2014,2,10,61
+"25","Al-Nusrah Front",2014,3,10,3
+"26","Al-Nusrah Front",2014,4,10,175
+"27","Al-Nusrah Front",2014,5,10,70
+"28","Al-Nusrah Front",2014,6,10,2
+"29","Al-Nusrah Front",2014,7,10,21
+"30","Al-Nusrah Front",2014,8,10,34
+"31","Al-Nusrah Front",2014,9,10,22
+"32","Al-Nusrah Front",2014,10,10,126
+"33","Al-Nusrah Front",2014,11,10,46
+"34","Al-Nusrah Front",2014,12,10,180
+"35","Al-Nusrah Front",2015,1,10,136
+"36","Al-Nusrah Front",2015,2,10,25
+"37","Al-Nusrah Front",2015,3,10,105
+"38","Al-Nusrah Front",2015,4,10,73
+"39","Al-Nusrah Front",2015,5,10,148
+"40","Al-Nusrah Front",2015,6,10,66
+"41","Al-Nusrah Front",2015,7,10,31
+"42","Al-Nusrah Front",2015,8,10,36
+"43","Al-Nusrah Front",2015,9,10,195
+"44","Al-Nusrah Front",2015,11,10,37
+"45","Al-Nusrah Front",2015,12,10,72
+"46","Al-Qaida",2010,4,10,55
+"47","Al-Qaida",2010,5,10,61
+"48","Al-Qaida",2010,6,10,13
+"49","Al-Qaida",2010,7,10,90
+"50","Al-Qaida",2010,8,10,20
+"51","Al-Qaida",2010,9,10,26
+"52","Al-Qaida",2010,10,8,0
+"53","Al-Qaida",2010,10,10,10
+"54","Al-Qaida",2010,11,10,118
+"55","Al-Qaida",2010,12,10,8
+"56","Al-Qaida",2011,1,10,79
+"57","Al-Qaida",2011,2,10,3
+"58","Al-Qaida",2011,3,10,190
+"59","Al-Qaida",2011,4,10,4
+"60","Al-Qaida",2011,5,10,17
+"61","Al-Qaida",2011,6,10,36
+"62","Al-Qaida",2011,7,10,51
+"63","Al-Qaida",2011,8,6,1
+"64","Al-Qaida",2011,8,10,107
+"65","Al-Qaida",2011,9,10,40
+"66","Al-Qaida",2011,10,10,3
+"67","Al-Qaida",2011,11,10,14
+"68","Al-Qaida",2011,12,10,121
+"69","Al-Qaida",2012,1,10,14
+"70","Al-Qaida",2012,2,10,117
+"71","Al-Qaida",2012,3,10,402
+"72","Al-Qaida",2012,4,10,223
+"73","Al-Qaida",2012,5,10,180
+"74","Al-Qaida",2012,6,10,226
+"75","Al-Qaida",2012,7,10,186
+"76","Al-Qaida",2012,8,10,188
+"77","Al-Qaida",2012,9,10,166
+"78","Al-Qaida",2012,10,10,103
+"79","Al-Qaida",2012,11,10,47.5
+"80","Al-Qaida",2012,12,10,48
+"81","Al-Qaida",2013,1,10,135
+"82","Al-Qaida",2013,2,10,119.3
+"83","Al-Qaida",2013,3,10,200
+"84","Al-Qaida",2013,4,10,49
+"85","Al-Qaida",2013,5,10,14
+"86","Al-Qaida",2013,6,10,2
+"87","Al-Qaida",2013,7,10,6
+"88","Al-Qaida",2013,8,10,28
+"89","Al-Qaida",2013,9,10,94
+"90","Al-Qaida",2013,10,10,38
+"91","Al-Qaida",2013,11,10,17
+"92","Al-Qaida",2013,12,10,89
+"93","Al-Qaida",2014,1,10,20
+"94","Al-Qaida",2014,2,10,25
+"95","Al-Qaida",2014,3,10,52
+"96","Al-Qaida",2014,4,10,55
+"97","Al-Qaida",2014,5,10,141
+"98","Al-Qaida",2014,6,10,63
+"99","Al-Qaida",2014,7,10,50
+"100","Al-Qaida",2014,8,10,122
+"101","Al-Qaida",2014,9,10,46
+"102","Al-Qaida",2014,10,10,148
+"103","Al-Qaida",2014,11,10,27
+"104","Al-Qaida",2014,12,10,125
+"105","Al-Qaida",2015,1,8,12
+"106","Al-Qaida",2015,1,10,76
+"107","Al-Qaida",2015,2,10,34
+"108","Al-Qaida",2015,3,10,41
+"109","Al-Qaida",2015,4,10,75
+"110","Al-Qaida",2015,5,10,21
+"111","Al-Qaida",2015,6,10,42
+"112","Al-Qaida",2015,7,10,8
+"113","Al-Qaida",2015,8,10,8
+"114","Al-Qaida",2015,9,10,10
+"115","Al-Qaida",2015,10,10,15
+"116","Al-Qaida",2015,12,10,18
+"117","Al-Shabaab",2010,1,11,4
+"118","Al-Shabaab",2010,2,11,11
+"119","Al-Shabaab",2010,3,11,6
+"120","Al-Shabaab",2010,4,11,9
+"121","Al-Shabaab",2010,5,11,6
+"122","Al-Shabaab",2010,6,11,11
+"123","Al-Shabaab",2010,7,11,84
+"124","Al-Shabaab",2010,8,11,39
+"125","Al-Shabaab",2010,9,11,10
+"126","Al-Shabaab",2010,10,11,7
+"127","Al-Shabaab",2010,11,11,4
+"128","Al-Shabaab",2010,12,11,15
+"129","Al-Shabaab",2011,1,11,8
+"130","Al-Shabaab",2011,2,11,19
+"131","Al-Shabaab",2011,3,11,5
+"132","Al-Shabaab",2011,4,11,15
+"133","Al-Shabaab",2011,5,11,4
+"134","Al-Shabaab",2011,6,11,12
+"135","Al-Shabaab",2011,7,11,6
+"136","Al-Shabaab",2011,8,11,5
+"137","Al-Shabaab",2011,9,11,12
+"138","Al-Shabaab",2011,10,11,128
+"139","Al-Shabaab",2011,11,11,67
+"140","Al-Shabaab",2011,12,11,13
+"141","Al-Shabaab",2012,1,11,81
+"142","Al-Shabaab",2012,2,11,94
+"143","Al-Shabaab",2012,3,11,67
+"144","Al-Shabaab",2012,4,11,56
+"145","Al-Shabaab",2012,5,11,73
+"146","Al-Shabaab",2012,6,11,36
+"147","Al-Shabaab",2012,7,11,112
+"148","Al-Shabaab",2012,8,11,34
+"149","Al-Shabaab",2012,9,11,58
+"150","Al-Shabaab",2012,10,11,31
+"151","Al-Shabaab",2012,11,11,36
+"152","Al-Shabaab",2012,12,11,32
+"153","Al-Shabaab",2013,1,11,69
+"154","Al-Shabaab",2013,2,11,38
+"155","Al-Shabaab",2013,3,11,36
+"156","Al-Shabaab",2013,4,11,58
+"157","Al-Shabaab",2013,5,11,73
+"158","Al-Shabaab",2013,6,11,58
+"159","Al-Shabaab",2013,7,11,64
+"160","Al-Shabaab",2013,8,11,37
+"161","Al-Shabaab",2013,9,11,126
+"162","Al-Shabaab",2013,10,11,36
+"163","Al-Shabaab",2013,11,11,47
+"164","Al-Shabaab",2013,12,11,97
+"165","Al-Shabaab",2014,1,11,65
+"166","Al-Shabaab",2014,2,11,81
+"167","Al-Shabaab",2014,3,11,139
+"168","Al-Shabaab",2014,4,11,131
+"169","Al-Shabaab",2014,5,11,212
+"170","Al-Shabaab",2014,6,11,215
+"171","Al-Shabaab",2014,7,11,285
+"172","Al-Shabaab",2014,8,11,85
+"173","Al-Shabaab",2014,9,11,100
+"174","Al-Shabaab",2014,10,11,132
+"175","Al-Shabaab",2014,11,11,165
+"176","Al-Shabaab",2014,12,11,172
+"177","Al-Shabaab",2015,1,11,68
+"178","Al-Shabaab",2015,2,11,76
+"179","Al-Shabaab",2015,3,11,72
+"180","Al-Shabaab",2015,4,11,222
+"181","Al-Shabaab",2015,5,11,69
+"182","Al-Shabaab",2015,6,11,237
+"183","Al-Shabaab",2015,7,11,204
+"184","Al-Shabaab",2015,8,11,162
+"185","Al-Shabaab",2015,9,11,249
+"186","Al-Shabaab",2015,10,11,12
+"187","Al-Shabaab",2015,11,11,113
+"188","Al-Shabaab",2015,12,11,102
+"189","Boko Haram",2010,9,11,4
+"190","Boko Haram",2010,10,11,6
+"191","Boko Haram",2010,11,11,4
+"192","Boko Haram",2010,12,11,58
+"193","Boko Haram",2011,1,11,16
+"194","Boko Haram",2011,2,11,7
+"195","Boko Haram",2011,3,11,9
+"196","Boko Haram",2011,4,11,6
+"197","Boko Haram",2011,5,11,32
+"198","Boko Haram",2011,6,11,44
+"199","Boko Haram",2011,7,11,17
+"200","Boko Haram",2011,8,11,34
+"201","Boko Haram",2011,9,11,13
+"202","Boko Haram",2011,10,11,11
+"203","Boko Haram",2011,11,11,86
+"204","Boko Haram",2011,12,11,52
+"205","Boko Haram",2012,1,11,330
+"206","Boko Haram",2012,2,11,120
+"207","Boko Haram",2012,3,11,60
+"208","Boko Haram",2012,4,11,136
+"209","Boko Haram",2012,5,11,34
+"210","Boko Haram",2012,6,11,134
+"211","Boko Haram",2012,7,11,120
+"212","Boko Haram",2012,8,11,59
+"213","Boko Haram",2012,9,11,58
+"214","Boko Haram",2012,10,11,80
+"215","Boko Haram",2012,11,11,56
+"216","Boko Haram",2012,12,11,64
+"217","Boko Haram",2013,1,11,86
+"218","Boko Haram",2013,2,11,74
+"219","Boko Haram",2013,3,11,123
+"220","Boko Haram",2013,4,11,103
+"221","Boko Haram",2013,5,11,114
+"222","Boko Haram",2013,6,11,94
+"223","Boko Haram",2013,7,11,100
+"224","Boko Haram",2013,8,11,201
+"225","Boko Haram",2013,9,11,318
+"226","Boko Haram",2013,10,11,268
+"227","Boko Haram",2013,11,11,108
+"228","Boko Haram",2013,12,11,140
+"229","Boko Haram",2014,1,11,230
+"230","Boko Haram",2014,2,11,413
+"231","Boko Haram",2014,3,11,492
+"232","Boko Haram",2014,4,11,351
+"233","Boko Haram",2014,5,11,1455
+"234","Boko Haram",2014,6,11,847
+"235","Boko Haram",2014,7,11,529
+"236","Boko Haram",2014,8,11,277
+"237","Boko Haram",2014,9,11,763
+"238","Boko Haram",2014,10,11,242
+"239","Boko Haram",2014,11,11,644
+"240","Boko Haram",2014,12,11,868
+"241","Boko Haram",2015,1,11,889
+"242","Boko Haram",2015,2,11,992
+"243","Boko Haram",2015,3,11,517
+"244","Boko Haram",2015,4,11,439
+"245","Boko Haram",2015,5,11,320
+"246","Boko Haram",2015,6,11,487
+"247","Boko Haram",2015,7,11,918
+"248","Boko Haram",2015,8,11,509
+"249","Boko Haram",2015,9,11,335
+"250","Boko Haram",2015,10,11,433
+"251","Boko Haram",2015,11,11,213
+"252","Boko Haram",2015,12,11,247
+"253","Fulani Militants",2010,4,11,0
+"254","Fulani Militants",2010,7,11,7
+"255","Fulani Militants",2010,10,11,6
+"256","Fulani Militants",2012,6,11,3
+"257","Fulani Militants",2012,9,11,3
+"258","Fulani Militants",2013,2,11,10
+"259","Fulani Militants",2013,3,11,2
+"260","Fulani Militants",2013,5,11,0
+"261","Fulani Militants",2013,6,11,1
+"262","Fulani Militants",2013,9,11,6
+"263","Fulani Militants",2013,11,11,43
+"264","Fulani Militants",2013,12,11,4
+"265","Fulani Militants",2014,1,11,35
+"266","Fulani Militants",2014,2,11,78
+"267","Fulani Militants",2014,3,11,304
+"268","Fulani Militants",2014,4,11,241
+"269","Fulani Militants",2014,5,11,31
+"270","Fulani Militants",2014,6,11,81
+"271","Fulani Militants",2014,7,11,73
+"272","Fulani Militants",2014,8,11,7
+"273","Fulani Militants",2014,9,11,175
+"274","Fulani Militants",2014,10,11,109
+"275","Fulani Militants",2014,11,11,63
+"276","Fulani Militants",2014,12,11,54
+"277","Fulani Militants",2015,1,11,98
+"278","Fulani Militants",2015,2,11,38
+"279","Fulani Militants",2015,3,11,125
+"280","Fulani Militants",2015,4,11,81
+"281","Fulani Militants",2015,5,11,136
+"282","Fulani Militants",2015,6,11,2
+"283","Fulani Militants",2015,7,11,1
+"284","Fulani Militants",2015,8,11,2
+"285","Fulani Militants",2015,9,11,64
+"286","Fulani Militants",2015,10,11,8
+"287","Fulani Militants",2015,12,11,17
+"288","ISIL",2013,4,10,28
+"289","ISIL",2013,5,10,130
+"290","ISIL",2013,6,10,159
+"291","ISIL",2013,7,10,316
+"292","ISIL",2013,8,10,222
+"293","ISIL",2013,9,10,267
+"294","ISIL",2013,10,10,95
+"295","ISIL",2013,11,10,70
+"296","ISIL",2013,12,10,169.33
+"297","ISIL",2014,1,10,221
+"298","ISIL",2014,2,10,184
+"299","ISIL",2014,3,10,270
+"300","ISIL",2014,4,10,242
+"301","ISIL",2014,5,10,272
+"302","ISIL",2014,6,10,2961
+"303","ISIL",2014,7,10,908
+"304","ISIL",2014,8,10,1705
+"305","ISIL",2014,9,10,525
+"306","ISIL",2014,10,10,967
+"307","ISIL",2014,11,10,369
+"308","ISIL",2014,12,10,724
+"309","ISIL",2015,1,10,696
+"310","ISIL",2015,2,10,357
+"311","ISIL",2015,3,10,646
+"312","ISIL",2015,4,10,921
+"313","ISIL",2015,5,10,940
+"314","ISIL",2015,6,10,1005
+"315","ISIL",2015,7,10,833
+"316","ISIL",2015,8,10,762
+"317","ISIL",2015,9,10,487
+"318","ISIL",2015,10,10,537
+"319","ISIL",2015,11,8,136
+"320","ISIL",2015,11,10,528
+"321","ISIL",2015,12,10,572
+"322","ISIL",2015,12,11,0
+"323","Taliban",2010,1,6,36
+"324","Taliban",2010,2,6,38
+"325","Taliban",2010,3,6,65
+"326","Taliban",2010,4,6,10
+"327","Taliban",2010,5,6,62
+"328","Taliban",2010,6,6,98
+"329","Taliban",2010,7,6,61
+"330","Taliban",2010,8,6,108
+"331","Taliban",2010,9,6,61
+"332","Taliban",2010,10,6,36
+"333","Taliban",2010,11,6,20
+"334","Taliban",2010,12,6,32
+"335","Taliban",2011,1,6,66
+"336","Taliban",2011,2,6,47
+"337","Taliban",2011,3,6,86
+"338","Taliban",2011,4,6,14
+"339","Taliban",2011,5,6,92
+"340","Taliban",2011,6,6,57
+"341","Taliban",2011,7,6,59
+"342","Taliban",2011,8,6,64
+"343","Taliban",2011,9,6,83
+"344","Taliban",2011,10,6,31
+"345","Taliban",2011,11,6,135
+"346","Taliban",2011,12,6,77
+"347","Taliban",2012,1,6,131
+"348","Taliban",2012,2,6,97
+"349","Taliban",2012,3,6,188
+"350","Taliban",2012,4,6,213
+"351","Taliban",2012,5,6,291
+"352","Taliban",2012,6,6,391
+"353","Taliban",2012,7,6,334
+"354","Taliban",2012,8,6,223
+"355","Taliban",2012,9,6,210
+"356","Taliban",2012,10,6,253
+"357","Taliban",2012,11,6,139
+"358","Taliban",2012,12,6,113
+"359","Taliban",2013,1,6,94
+"360","Taliban",2013,2,6,66
+"361","Taliban",2013,3,6,177
+"362","Taliban",2013,4,6,272
+"363","Taliban",2013,5,6,280
+"364","Taliban",2013,6,6,304
+"365","Taliban",2013,7,6,254
+"366","Taliban",2013,8,6,470
+"367","Taliban",2013,9,6,286
+"368","Taliban",2013,10,6,233
+"369","Taliban",2013,11,6,125
+"370","Taliban",2013,12,6,173
+"371","Taliban",2014,1,6,221
+"372","Taliban",2014,2,6,127
+"373","Taliban",2014,2,7,3
+"374","Taliban",2014,3,6,279
+"375","Taliban",2014,4,6,218
+"376","Taliban",2014,5,6,406
+"377","Taliban",2014,6,6,292
+"378","Taliban",2014,7,6,691
+"379","Taliban",2014,8,6,459
+"380","Taliban",2014,9,6,537
+"381","Taliban",2014,10,6,260
+"382","Taliban",2014,11,6,321
+"383","Taliban",2014,12,6,298
+"384","Taliban",2015,1,6,230
+"385","Taliban",2015,2,6,135
+"386","Taliban",2015,3,6,234
+"387","Taliban",2015,4,6,417
+"388","Taliban",2015,5,6,678
+"389","Taliban",2015,6,6,604
+"390","Taliban",2015,7,6,420
+"391","Taliban",2015,8,6,418
+"392","Taliban",2015,9,6,709
+"393","Taliban",2015,10,6,734
+"394","Taliban",2015,11,6,223
+"395","Taliban",2015,12,6,413
+"396","Tehrik-i-Taliban Pakistan (TTP)",2010,1,6,114
+"397","Tehrik-i-Taliban Pakistan (TTP)",2010,2,6,26
+"398","Tehrik-i-Taliban Pakistan (TTP)",2010,3,6,71
+"399","Tehrik-i-Taliban Pakistan (TTP)",2010,4,6,12
+"400","Tehrik-i-Taliban Pakistan (TTP)",2010,5,1,0
+"401","Tehrik-i-Taliban Pakistan (TTP)",2010,5,6,103
+"402","Tehrik-i-Taliban Pakistan (TTP)",2010,6,6,33
+"403","Tehrik-i-Taliban Pakistan (TTP)",2010,7,6,118
+"404","Tehrik-i-Taliban Pakistan (TTP)",2010,8,6,10
+"405","Tehrik-i-Taliban Pakistan (TTP)",2010,9,6,113
+"406","Tehrik-i-Taliban Pakistan (TTP)",2010,10,6,42
+"407","Tehrik-i-Taliban Pakistan (TTP)",2010,11,6,120
+"408","Tehrik-i-Taliban Pakistan (TTP)",2010,12,6,101
+"409","Tehrik-i-Taliban Pakistan (TTP)",2011,1,6,51
+"410","Tehrik-i-Taliban Pakistan (TTP)",2011,2,6,40
+"411","Tehrik-i-Taliban Pakistan (TTP)",2011,3,6,74
+"412","Tehrik-i-Taliban Pakistan (TTP)",2011,4,6,72
+"413","Tehrik-i-Taliban Pakistan (TTP)",2011,5,6,139
+"414","Tehrik-i-Taliban Pakistan (TTP)",2011,6,6,73
+"415","Tehrik-i-Taliban Pakistan (TTP)",2011,7,6,0
+"416","Tehrik-i-Taliban Pakistan (TTP)",2011,8,6,59
+"417","Tehrik-i-Taliban Pakistan (TTP)",2011,9,6,91
+"418","Tehrik-i-Taliban Pakistan (TTP)",2011,10,6,9
+"419","Tehrik-i-Taliban Pakistan (TTP)",2011,11,6,7
+"420","Tehrik-i-Taliban Pakistan (TTP)",2011,12,6,19
+"421","Tehrik-i-Taliban Pakistan (TTP)",2012,1,6,110
+"422","Tehrik-i-Taliban Pakistan (TTP)",2012,2,6,73
+"423","Tehrik-i-Taliban Pakistan (TTP)",2012,3,6,163
+"424","Tehrik-i-Taliban Pakistan (TTP)",2012,4,6,24
+"425","Tehrik-i-Taliban Pakistan (TTP)",2012,5,6,46
+"426","Tehrik-i-Taliban Pakistan (TTP)",2012,6,6,75
+"427","Tehrik-i-Taliban Pakistan (TTP)",2012,7,6,80
+"428","Tehrik-i-Taliban Pakistan (TTP)",2012,8,6,165
+"429","Tehrik-i-Taliban Pakistan (TTP)",2012,9,6,51
+"430","Tehrik-i-Taliban Pakistan (TTP)",2012,10,6,38
+"431","Tehrik-i-Taliban Pakistan (TTP)",2012,11,6,73
+"432","Tehrik-i-Taliban Pakistan (TTP)",2012,12,6,77
+"433","Tehrik-i-Taliban Pakistan (TTP)",2013,1,6,28
+"434","Tehrik-i-Taliban Pakistan (TTP)",2013,2,6,122
+"435","Tehrik-i-Taliban Pakistan (TTP)",2013,3,6,75
+"436","Tehrik-i-Taliban Pakistan (TTP)",2013,4,6,90
+"437","Tehrik-i-Taliban Pakistan (TTP)",2013,5,6,93
+"438","Tehrik-i-Taliban Pakistan (TTP)",2013,6,6,78
+"439","Tehrik-i-Taliban Pakistan (TTP)",2013,7,6,44
+"440","Tehrik-i-Taliban Pakistan (TTP)",2013,8,6,61
+"441","Tehrik-i-Taliban Pakistan (TTP)",2013,9,6,81
+"442","Tehrik-i-Taliban Pakistan (TTP)",2013,10,6,20
+"443","Tehrik-i-Taliban Pakistan (TTP)",2013,11,6,19
+"444","Tehrik-i-Taliban Pakistan (TTP)",2013,12,6,18
+"445","Tehrik-i-Taliban Pakistan (TTP)",2014,1,6,96
+"446","Tehrik-i-Taliban Pakistan (TTP)",2014,2,6,70
+"447","Tehrik-i-Taliban Pakistan (TTP)",2014,3,6,38
+"448","Tehrik-i-Taliban Pakistan (TTP)",2014,4,6,27
+"449","Tehrik-i-Taliban Pakistan (TTP)",2014,5,6,56
+"450","Tehrik-i-Taliban Pakistan (TTP)",2014,6,6,78
+"451","Tehrik-i-Taliban Pakistan (TTP)",2014,7,6,51
+"452","Tehrik-i-Taliban Pakistan (TTP)",2014,8,6,50
+"453","Tehrik-i-Taliban Pakistan (TTP)",2014,9,6,42
+"454","Tehrik-i-Taliban Pakistan (TTP)",2014,10,6,2
+"455","Tehrik-i-Taliban Pakistan (TTP)",2014,11,6,83
+"456","Tehrik-i-Taliban Pakistan (TTP)",2014,12,6,189
+"457","Tehrik-i-Taliban Pakistan (TTP)",2015,1,6,15
+"458","Tehrik-i-Taliban Pakistan (TTP)",2015,2,6,10
+"459","Tehrik-i-Taliban Pakistan (TTP)",2015,3,6,46
+"460","Tehrik-i-Taliban Pakistan (TTP)",2015,4,6,17
+"461","Tehrik-i-Taliban Pakistan (TTP)",2015,5,6,58
+"462","Tehrik-i-Taliban Pakistan (TTP)",2015,6,6,18
+"463","Tehrik-i-Taliban Pakistan (TTP)",2015,7,6,45
+"464","Tehrik-i-Taliban Pakistan (TTP)",2015,8,6,45
+"465","Tehrik-i-Taliban Pakistan (TTP)",2015,9,6,57
+"466","Tehrik-i-Taliban Pakistan (TTP)",2015,10,6,16
+"467","Tehrik-i-Taliban Pakistan (TTP)",2015,11,6,7
+"468","Tehrik-i-Taliban Pakistan (TTP)",2015,12,6,34

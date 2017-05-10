@@ -7,8 +7,9 @@ output: html_document
 ```{r}
 library(tidyverse)
 library(readr)
-terror <- read_csv("globalterrorismdb_0616dist.csv")
-terror_kill_yr <- read_csv("terror_nkill_year.csv")
+terror <- read.csv("globalterrorismdb_0616dist.csv")
+terror_kill_yr <- read.csv("terror_nkill_year.csv")
+
 #colnames(terror)
 ```
 

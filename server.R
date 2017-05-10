@@ -14,8 +14,8 @@ word_temp <- read_csv("terror_wordFinal.csv")
 map_data_julien <- read_csv("terror_map_julien.csv")
 terror_scatter <- read_csv("terror_scatter.csv")
 terror_bar <- read_csv("terror_bar.csv")
-usa_links <- read_csv("usa_links.csv")
-usa_nodes <- read_csv("usa_nodes.csv")
+usa_links <- read_csv("alex_usa_links.csv")
+usa_nodes <- read_csv("alex_usa_nodes.csv")
 
 # terror_data.recent <- terror %>% filter(iyear > 1997)
 # terror_data.recent.usa <- terror_data.recent %>% dplyr::filter(country == 217 & gname != "Unknown")
@@ -134,12 +134,20 @@ shinyServer(function(input, output) {
     barRegion
   })
 
-
+  
+  usa_links <- as.data.frame(usa_links)
   output$sankey <- renderSankeyNetwork({
     sankeyNetwork(Links = usa_links, Nodes = usa_nodes, Source = "from", Target = "to",
                   Value = "weight", NodeID = "name",  fontSize = 12, nodeWidth = 30)
 
   })
+  
+  
+  output$groupTimeSeries <- renderggplot(time_s_data_2, aes(x = iyear+imonth/12, y = kills, color = gname)) + 
+    geom_line() + theme(legend.position="bottom") + labs(title = "Rising Terror ",
+                                                         color = "Terrorist Group", y = "Kills", x = 'Date')
+  ggplotly(p)
+  
 
 
 
