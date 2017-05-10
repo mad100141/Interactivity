@@ -41,6 +41,11 @@ barChartsFull <- read_csv("barCharts.csv")
 #select(region_txt, attacktype1_txt, weaptype1_txt, success, targtype1_txt, 
 #          suicide, multiple, iyear, imonth,iday, nkill)
 
+convert <- function(term) {
+  if(term == region_txt) {"Region"}
+}
+
+
 #Region given etc
 ggplot(barChartsFull, aes(x = region_txt)) + 
   geom_bar(aes(fill = attacktype1_txt))
@@ -188,7 +193,16 @@ ggplot(barChartsFull, aes(x = input$xaxis)) +
   labs(x = input$xaxis, y = input$fill, 
        title = paste(fill, " Conditional Given the Marginal of", xaxis))
 
+#write.csv(usa_links, file = "usa_links.csv")
+#write.csv(usa_nodes, file = "usa_nodes.csv")
 
+ggplot(barChartsFull, aes(x = iyear)) + geom_bar(aes(color = region_txt))
 
 ```
 
+
+
+
+
+
+What to show?

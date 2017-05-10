@@ -1,0 +1,109 @@
+@import url('//fonts.googleapis.com/css?family=Cormorant+Garamond|Julius+Sans+One');
+
+* {
+   font-size: 12pt;
+   font-family: Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#mainBody{
+    background-color: grey;
+}
+
+#sideBar{
+    background-color: red;
+    color: white;
+}
+
+input[type="number"] {
+  max-width: 80%;
+}
+
+div.outer {
+  position: fixed;
+  top: 41px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Customize fonts */
+body, label, input, button, select { 
+  font-family: 'Helvetica Neue', Helvetica;
+  font-weight: 200;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 45pt;
+    color: lightgrey;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 500;
+    font-size: 30pt;
+    color: "#91AA9D";
+}
+
+h3, h4 { font-weight: 400; }
+
+#comparison_message {
+   font-family: 'Helvetica Neue', Helvetica;
+}
+
+#faculty1_name, 
+#faculty2_name {
+   font-family: 'Cormorant Garamond', sans-serif;
+   font-size: 30pt;
+   padding: 5%;
+}
+
+#faculty1_overall, 
+#faculty2_overall,
+#faculty1_hr, 
+#faculty2_hr, 
+#faculty1_taught, 
+#faculty2_taught {
+   font-family: 'Cormorant Garamond', sans-serif;
+   font-size: 30pt;
+   color: #428bca;
+   padding-bottom: 5px;
+   margin-bottom: 0px;
+   display: inline;
+   margin: 0px;
+   padding: 0px;
+}
+
+#rating_description1,
+#rating_description2 {
+   font-family: 'Cormorant Garamond', sans-serif;
+   font-size: 20pt;
+   color: gray;
+}
+
+#courseName {
+   font-family: 'Cormorant Garamond', sans-serif;
+   font-size: 30pt;
+   color: black;
+}
+
+.label {
+   font-family: 'Helvetica Neue', sans-serif;
+   font-size: 10pt;
+   color: grey;
+   padding-left: 10%;
+}
+
+#rateComment {
+   line-height: 150%;
+}
