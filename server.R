@@ -68,6 +68,80 @@ shinyServer(function(input, output) {
       with(wordcloud(word, n, max.words = 50))
     words
   })
+  
+  output$us_map <- renderPlot({
+    
+    terror_us <- terror_dat %>% filter(country_txt == "United States")
+    terror_us <- terror_us %>% filter(latitude > 25 & latitude < 50)
+    terror_us <- terror_us %>% filter(longitude > -150 & longitude < -50)
+    terror_us$suicide[terror_us$suicide == 1] <- "Yes"
+    terror_us$suicide[terror_us$suicide == 0] <- "No"
+    terror_us$success[terror_us$success == 1] <- "Yes"
+    terror_us$success[terror_us$success == 0] <- "No"
+    
+    state_borders <- map_data("state") 
+    
+    if (input$person_map == "Deaths") {
+      
+      mapp <- ggplot() +
+        geom_polygon(data = state_borders, aes(x = long, y = lat, group = group), 
+                     color = "black")
+      mapp <- mapp + geom_point(data = terror_us, aes(x = longitude, 
+                                                      y = latitude, 
+                                                      fill = nkill, size = nkill), 
+                                color = "white", shape = 21, stroke=0.2) +
+        scale_fill_gradient2(low = "purple", high = "deeppink3", 
+                             mid = "orange", midpoint = 1) +
+        labs(
+          title = "US Map of Terrorist attacks, by kills",
+          x = "Longitude",
+          y = "Latitude",
+          fill = "Number of Casualties",
+          size = "Number of Casualties"
+        ) + theme_void() + 
+        scale_size(range = c(2, 10))
+      mapp
+    }
+    
+    else if (input$person_map == "Successful Attacks and Deaths") {#Success
+      mapp <- ggplot() +
+        geom_polygon(data = state_borders, aes(x = long, y = lat, group = group), 
+                     color = "black")
+      mapp <- mapp + geom_point(data = terror_us, aes(x = longitude, 
+                                                      y = latitude, 
+                                                      fill = success, size = nkill), 
+                                color = "white", shape = 21, stroke=0.2) +
+        scale_fill_manual(values=c("purple", "orange")) +
+        labs(
+          title = "US Map of Terrorist attacks, by kills",
+          x = "Longitude",
+          y = "Latitude",
+          fill = "Success",
+          size = "Number of Casualties"
+        ) + theme_void() + 
+        scale_size(range = c(2, 10))
+      mapp
+    }
+    else {#Suicide
+      mapp <- ggplot() +
+        geom_polygon(data = state_borders, aes(x = long, y = lat, group = group), 
+                     color = "black")
+      mapp <- mapp + geom_point(data = terror_us, aes(x = longitude, 
+                                                      y = latitude, 
+                                                      fill = suicide, size = nkill), 
+                                color = "white", shape = 21, stroke=0.2) +
+        scale_fill_manual(values=c("purple", "orange")) +
+        labs(
+          title = "US Map of Terrorist attacks, by kills",
+          x = "Longitude",
+          y = "Latitude",
+          fill = "Suicide",
+          size = "Number of Casualties"
+        ) + theme_void() + 
+        scale_size(range = c(2, 10))
+      mapp
+    }
+  })
 
   output$scatter <- renderPlotly({
     terror_scatter$gname <- str_replace_all(terror_scatter$gname, "[\r\n]" , "")

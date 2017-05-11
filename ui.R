@@ -4,7 +4,7 @@ library(shinythemes)
 library(shinydashboard)
 library(ggmap)
 library(networkD3)
-
+terror <- read_csv("globalterrorismdb_0616dist.csv")
 shinyUI(bootstrapPage(
 
   dashboardPage(
@@ -32,7 +32,11 @@ shinyUI(bootstrapPage(
               sliderInput(inputId = "year", label = "Year",
                           min = 1970, max = 2015, value = 1970),
               tabPanel("Word Cloud", plotOutput(outputId = "word_cloud",
-                                                height = "300px"))
+                                                height = "300px")),
+              selectInput(inputId = "person_map", label = "Variable",
+                          choices = c("Deaths", "Successful Attacks and Deaths",
+                                      "Suicide Attacks and Deaths")),
+              tabPanel("US Map", plotOutput(outputId = "us_map"))
       ),
       tabItem(tabName = "maria", title = "Group Name",
               tabPanel("Scatter", plotlyOutput(outputId = "scatter", width = "600px"))
